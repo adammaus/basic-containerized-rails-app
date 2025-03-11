@@ -4,6 +4,7 @@ Based on `rails new <app>`
 
 # Versions
 Ruby 3.4.2
+
 Rails 8.0.1
 
 # To run from Docker
@@ -25,8 +26,8 @@ Navigate to http://localhost:8082/
 
 # Logging In
 1. Use the following credentials:
-	a. Username: admin
-	b. Password: test
+	1. Username: admin
+	2. Password: test
 
 # Terminal into the server on Docker
 1. Run `docker exec -it ruby_web bash`
