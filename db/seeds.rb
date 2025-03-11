@@ -7,3 +7,9 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+
+if ENV["RAILS_ENV"] = "development"
+	Role.create(name: "admin")
+	Role.create(name: "user")
+	User.create(username: "admin", role_id: 1, password: "test")
+end
