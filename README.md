@@ -32,6 +32,6 @@ Navigate to http://localhost:8082/
 # Terminal into the server on Docker
 1. Run `docker exec -it ruby_web bash`
 
-# To set keys and secrets in docker-compose.yml
+# Setting environment keys and secrets in docker-compose.yml
 1. Run `bin/rails db:encryption:init` from within the web container
-2. Update ACTIVE_RECORD_* keys based on the results
+2. Update ACTIVE_RECORD_* keys in docker-compose.yml based on the results
