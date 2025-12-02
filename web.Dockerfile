@@ -1,5 +1,4 @@
-ARG RUBY_VERSION=3.4.2
-FROM ruby:$RUBY_VERSION
+FROM ruby:3.4
 
 WORKDIR /app
 
