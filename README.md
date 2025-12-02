@@ -29,6 +29,11 @@ Navigate to http://localhost:8082/
 	1. Username: admin
 	2. Password: test
 
+# To rebuild everything
+```
+docker compose down --remove-orphans; docker compose build --no-cache; docker compose up -d;
+```
+
 # Terminal into the server on Docker
 1. Run `docker exec -it ruby_web bash`
 
