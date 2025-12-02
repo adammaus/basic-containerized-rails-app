@@ -3,9 +3,9 @@
 Based on `rails new <app>`
 
 # Versions
-Ruby 3.4.2
+Ruby 3.4
 
-Rails 8.0.1
+Rails 8.1
 
 # To run from Docker
 1. Run the following:
@@ -42,3 +42,7 @@ NOTE: Keeping your secrets in docker-compose.yml is a bad idea. You should injec
 
 1. Run `bin/rails db:encryption:init` from within the web container
 2. Update ACTIVE_RECORD_* keys in docker-compose.yml based on the results
+
+# Troubleshooting
+## Invalid option on web container
+1. Use a package like `dos2unix` to convert the **bin/docker-entrypoint** file.
