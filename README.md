@@ -46,3 +46,10 @@ NOTE: Keeping your secrets in docker-compose.yml is a bad idea. You should injec
 # Troubleshooting
 ## Invalid option on web container
 1. Use a package like `dos2unix` to convert the **bin/docker-entrypoint** file.
+
+## To convert Line-Endings on entire repo
+```
+git config core.autocrlf input
+git rm --cached -r .
+git reset --hard
+```
