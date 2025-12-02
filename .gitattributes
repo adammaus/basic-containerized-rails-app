@@ -1,7 +1,4 @@
 # See https://git-scm.com/docs/gitattributes for more about git attribute files.
-# Helps with Docker
-eol=lf
-
 # Mark the database schema as having been generated.
 db/schema.rb linguist-generated
 
