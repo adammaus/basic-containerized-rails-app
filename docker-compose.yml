@@ -29,20 +29,19 @@ services:
       ACTIVE_RECORD_ENCRYPTION_KEY_DERIVATION_SALT: LECZczsUN1nu9YjWOqf96U9lObxf8cuj
 
   mysql:
-    image: mysql:9.2
+    image: mysql:9.5
     container_name: ruby_db
     volumes:
       # - /tmp/mysql/:/var/lib/mysql # This causes an issue on Mac M1 chips
       - docker-mysql-data:/var/lib/mysql
-      - ./script/db-container-startup.sh:/script/db-container-startup.sh
+      - ./script/db-container-startup.sql:/script/db-container-startup.sql
     ports:
       - 3306:3306
     expose: [3306]
     environment:
       MYSQL_ROOT_USERNAME: root
       MYSQL_ROOT_PASSWORD: testtest
-    command: >
-      sh script/db-container-startup.sh
+    command: ['mysqld', '--character-set-server=utf8mb4', '--collation-server=utf8mb4_general_ci', "--init-file=/script/db-container-startup.sql"]
     networks:
       static-network:
         ipv4_address: 172.21.128.2
